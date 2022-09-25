@@ -1,0 +1,127 @@
+# include<iostream>
+using namespace std;
+int main(){
+	int a,b;
+	cout<<"enter the value of a and b"<<endl;
+	cin>>a >>b;
+	int sum=a+b;
+	cout<<sum<<" ";
+	return 0;
+}
+
+enter the value of a and b
+10 20
+30 
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int p,r,t;
+    cout<<"enter the value of p,r,t"<<endl;
+    cin>>p>>r>>t;
+    int si=(p*r*10)/100;
+    cout<<"simple intrest is:"<<si<<endl;
+    return 0;
+    
+}
+
+enter the value of p,r,t
+10 20 30
+simple intrest is:20
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cin>>a>>b;
+    if(a>b){
+        cout<<"A is greater...."<<endl;
+    }
+    else{
+        cout<<"B is greater......"<<endl;
+    }
+    return 0;
+}
+
+15 20
+B is greater......
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cout<<"enter the value of a,b,c"<<endl;
+    cin>>a>>b>>c;
+    int avg=(a+b+c)/3;
+    cout<<"average" <<avg<<" "<<endl;
+    return 0;
+}
+
+enter the value of a,b,c
+2
+2
+2
+average2 
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    if(n%2==0){
+        cout<<"even............"<<endl;
+    }
+    else{
+        cout<<"odd..................."<<endl;
+    }
+    return 0;
+}
+
+56
+even............
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    if(n>0){
+        cout<<"positive.............."<<endl;
+    }
+    else if(n<0){
+        cout<<"negative............."<<endl;
+    }
+    else{
+        cout<<"zero....................."<<endl;
+    }
+    return 0;
+}
+
+-22
+negative.............
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int num=1;
+    while(num<=n){
+        cout<<num<<endl;
+        num=num+1;
+    }
+    return 0;
+}
+
+10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
