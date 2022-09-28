@@ -1,0 +1,478 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n=3;
+    char ch='1';
+    switch(n){
+        case 1:cout<<"first"<<endl;
+        break;
+        case 2:cout<<"second"<<endl;
+        break;
+        case 3:cout<<"third"<<endl;
+        break;
+        default :cout<<"invalid"<<endl;
+    }
+
+    return 0;
+}
+
+Output         third
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a;
+    cout<<"enter the first number"<<endl;
+    cin>>a;
+    int b;
+    cout<<"enter the second number"<<endl;
+    cin>>b;
+    char op;
+    cout<<"enter the operation"<<endl;
+    cin>>op;
+    cout<<"result of the operation"<<endl;
+    switch(op){
+        case '+':cout<<(a+b)<<endl;
+        break;
+        case '-':cout<<(a-b)<<endl;
+        break;
+        case '*':cout<<(a*b)<<endl;
+        break;
+        case '/':cout<<(a/b)<<endl;
+        break;
+        case '%':cout<<(a%b)<<endl;;
+        break;
+        default:cout<<"invalid"<<endl;
+    }
+    return 0;
+}
+
+enter the first number
+12
+enter the second number
+13
+enter the operation
++
+result of the operation
+25
+
+# include<iostream>
+using namespace std;
+int main(){
+    int amount;
+    int n1,n20,n50,n100;
+    n1=n20=n50=n100=0;
+    cout<<"enter the the amount for number of notes.."<<endl;
+    cin>>amount;
+    switch(amount>=100){
+        case 1:n100=amount/100;
+               amount-=n100*100;
+               break;
+    }
+    switch(amount>=50){
+       case 1: n50=amount/50;
+        amount-=n50*50;
+        break;
+    }
+    switch(amount>=20){
+        case 1:n20=amount/20;
+               amount-=n20*20;
+               break;
+    }
+    switch(amount>=1){
+        case 1:n1=amount/1;
+               amount-=n1*1;
+               break;
+    }
+    cout<<"100="<<n100<<endl;
+    cout<<"50="<<n50<<endl;
+    cout<<"20="<<n20<<endl;
+    cout<<"1="<<n1<<endl;
+    
+}
+
+enter the the amount for number of notes..
+1330
+100=13
+50=0
+20=1
+1=10
+
+#include<iostream>
+using namespace std; 
+int factorial(int n){
+    int fact=1;
+    for(int i=1;i<=n;i++){
+        fact=fact*i;
+    }
+    return fact;
+}
+int nCr(int n,int r){
+    int num=factorial(n);
+    int denom=factorial(r)*factorial(n-r);
+    return num/denom;
+}
+int main(){
+    int n ,r ;
+    cin>>n>>r;
+    int answer=nCr(n,r);
+    cout<<"answer is"<<answer<<endl;
+}
+
+#include<iostream>
+using namespace std;
+void printcounting(int a){
+    for(int i=1;i<=a;i++){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+}
+int main(){
+    int n;
+    cin>>n;
+    printcounting(n);
+    
+    return 0;
+}
+
+10
+1 2 3 4 5 6 7 8 9 10
+
+#include<iostream>
+using namespace std;
+bool isprime(int n){
+    for(int i=2;i<n;i++){
+        if(n%i==0){
+            return 0;
+        }
+        return 1;
+    }
+}
+int main(){
+    int n;
+    cin>>n;
+    if(isprime(n)){
+        cout<<"prime"<<endl;
+    }
+    else{
+        cout<<"not prime"<<endl;
+    }
+    return 0;
+}
+
+7
+Prime
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int power(int n1,int n2){
+    int answer=1;
+    for(int i=1;i<=n2;i++){
+        answer*=n1;
+    }
+    return answer;
+}
+int main(){
+    int a,b;
+    cin>>a>>b;
+    int ans=power(a,b);
+    cout<<"power of given number is"<<ans<<endl;
+    return 0;
+}
+
+2 3
+power of given number is8
+
+# include<iostream>
+using namespace std;
+bool iseven(int n){
+    if(n&1){
+        return 0;
+    }
+    return 1;
+}
+int main(){
+    int n;
+    cin>>n;
+    if(iseven(n)){
+        cout<<"even"<<endl;
+        return 1;
+    }
+    cout<<"odd"<<endl;
+    return 0;
+}
+
+8
+Even
+
+# include<iostream>
+using namespace std;
+int fibonacii(int n){
+    if(n==0 || n==1){
+        return 1;
+    }
+    else{
+        return fibonacii(n-1)+fibonacii(n-2);
+    }
+}
+int main(){
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    cout<<fibonacii(i)<<" ";
+    return 0;
+}
+5
+1 1 2 3 5
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a[5]={1,2,3,4,5};
+    cout<<a[3]<<endl;
+    cout<<a[2]<<endl;
+    return 0;
+}
+
+4
+3
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a[5]={1,2};
+    cout<<a[3]<<endl;
+    cout<<a[2]<<endl;
+    
+    return 0;
+}
+0
+0
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a[5]={};
+    cout<<a[3]<<endl;
+    cout<<a[2]<<endl;
+    cout<<a[4]<<endl;
+    return 0;
+}
+0
+0
+0
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a[5];
+    cout<<a[3]<<endl;
+    cout<<a[2]<<endl;
+    cout<<a[4]<<endl;
+    return 0;
+}
+21865
+-164839200
+-1518513936
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a[]={1,2,3};
+    cout<<a[3]<<endl;
+    cout<<a[2]<<endl;
+    cout<<a[4]<<endl;
+    return 0;
+}
+-2054381568
+3
+-614716356
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n=5;
+    int a[5]={1,2,3,4,5};
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+    return 0;
+}
+
+1 2 3 4 5
+
+#include <iostream>
+using namespace std;
+int acesselement(int arr[],int size){
+    for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+    
+}
+
+int main() {
+    int n=5;
+    int a[5]={1,2,3,4,5};
+    acesselement(a,5);
+    
+    return 0;
+}
+1 2 3 4 5
+#include <iostream>
+using namespace std;
+int getmax(int arr[],int size){
+        int max=arr[0];
+        for(int i=0;i<size;i++)
+        if(arr[i]>max){
+            max=arr[i];
+        }
+        return max;
+       
+}
+int getmin(int arr[],int size){
+    int min=arr[0];
+    for(int i=0;i<size;i++)
+    if(arr[i]<min){
+        min=arr[i];
+    }
+    return min;
+}
+int main(){
+    int n=5;
+    int a[5]={2,3,1,8,7};
+    int answer=getmax(a,5);
+    int ans=getmin(a,5);
+    cout<<"maximum element is"<<" "<<answer<<endl;
+    cout<<"minimum element is"<<" "<<ans<<endl;
+    return 0;
+}
+maximum element is 8
+minimum element is 1
+
+# include<iostream>
+using namespace std;
+int main(){
+    int n=5;
+    int a[5]={1,2,3,4,5};
+    int *p;
+    p=new int[5];
+    p[0]={4};
+    p[1]={2};
+    p[2]={7};
+    p[3]={9};
+    p[4]={11};
+    
+        cout<<"element inside stack"<<endl;
+    for (int i=0;i<n;i++){
+        cout<<a[i]<<endl;
+    }
+    cout<<"elements inside heap"<<endl;
+    for(int i=0;i<n;i++){
+        cout<<p[i]<<endl;
+    }
+    return 0;
+}
+element inside stack
+1
+2
+3
+4
+5
+elements inside heap
+4
+2
+7
+9
+11
+
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+bool search(int arr[],int size,int key){
+    for(int i=0;i<size;i++){
+        if(arr[i]==key){
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int main() { 
+    int arr[7]={2,3,1,6,7,8,0};
+    cout<<"enter the element which you want to search"<<endl;
+    int  key;
+    cin>>key;
+    bool found=search(arr,7,key);
+    if(found){
+        cout<<"element present in given array"<<endl;
+    }
+    else{
+        cout<<"element does not exists"<<endl;
+    }
+
+    return 0;
+}
+
+enter the element which you want to search
+8
+element present in given array
+
+# include<iostream>
+using namespace std;
+int reverse(int arr[],int  n){
+    int start=0;
+    int end=n-1;
+    while(start<=end){
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }
+    
+}
+void printarray(int arr[],int n){
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+int main(){
+    int arr[6]={1,2,3,4,5,6};
+    int brr[5]={2,4,5,6,7};
+    int crr[8]={11,13,14,17,54,76,67,81};
+    
+    reverse(arr,6);
+    reverse(brr,5);
+    reverse(crr,8);
+    printarray(arr,6);
+   printarray(brr,5);
+   printarray(crr,8);
+    return 0;
+}
+6 5 4 3 2 1 
+7 6 5 4 2 
+81 67 76 54 17 14 13 11
+
+#include<iostream>
+using namespace std;
+int sumofarray(int arr[],int size){
+    int sum=0;
+    for(int i=0;i<size;i++){
+        sum+=arr[i];
+    }
+    return sum;
+}
+int main(){
+    int arr[7]={2,5,6,7,8,12,5};
+    int answer=sumofarray(arr,7);
+    cout<<"sum of array is"<<" "<<answer<<endl;
+    return 0;
+}
+
+sum of array is 45
