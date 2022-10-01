@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+void reversealternate(int arr[],int n){
+    for(int i=0;i<n;i+=2){
+        if(i+1<n){
+            swap(arr[i],arr[i+1]);
+        }
+    }
+}
+void printarray(int arr[],int n){
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+int main(){
+    int arr[6]={1,3,5,7,9,11};
+    reversealternate(arr,6);
+    printarray(arr,6);
+    return 0;
+}
+3 1 7 5 11 9
+
+
+# include<iostream>
+using namespace std;
+int findunique(int arr[],int n){
+    int ans=0;
+    for(int i=0;i<n;i++){
+        ans=ans^arr[i];
+    }
+    return ans;
+}
+
+int main(){
+    int arr[7]={1,2,1,3,2,4,3};
+    int answer=findunique(arr,7);
+   cout<<"unique element is"<<" "<<answer<<" ";
+    return 0;
+}
+unique element is 4
+# include<iostream>
+using namespace std;
+int duplicate(int arr[],int n){
+    int ans=0;
+    for(int i=0;i<n;i++){
+        ans=ans^arr[i];
+    }
+    for(int i=1;i<n ;i++){
+        ans=ans^i;
+    }
+    return ans;
+}
+int main(){
+    int arr[7]={1,2,3,4,2,5,6};
+    int answer=duplicate(arr,7);
+    cout<<"duplicate elemenent is"<<" "<<answer<<" ";
+    return 0;
+}
+
+duplicate elemenent is 2
